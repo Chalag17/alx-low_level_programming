@@ -1,8 +1,8 @@
 #include "main.h"
 /**
- * main -
- *
- * Return: Always 0 (Success)
+ * main -main block
+ *Description:print -putchar in a new lin
+ * Return: this program return zero
  */
 int main(void)
 {
