@@ -32,4 +32,4 @@ return (length);
  *
  *Solution was copied from Nobert Patrick
  *Wise, github handle: Trikcode
- *
+ */
