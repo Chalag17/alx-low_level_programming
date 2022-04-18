@@ -1,1 +1,1 @@
-my name is chala am new for ALX
+readme 0x05. C - Pointers, arrays and strings
