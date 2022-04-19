@@ -2,9 +2,8 @@
 
 /**
  * _strlen -length of string 
- * @s: A pointer prints a string, followed by a newline to stdout
+ *@s: A pointer prints a string, followed by a newline to stdout
  * 
- * @str: string parameter to print
  *
  * Return:void
  */
