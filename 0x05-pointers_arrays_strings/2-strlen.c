@@ -1,9 +1,9 @@
 #include "main.h"
 
 /**
- *_strlen  -length of string 
- * _puts - prints a string, followed by a newline to stdout
- *
+ * _strlen -length of string 
+ * *s pointer  - prints a string, followed by a newline to stdout
+ * 
  * @str: string parameter to print
  *
  * Return: Nothing
