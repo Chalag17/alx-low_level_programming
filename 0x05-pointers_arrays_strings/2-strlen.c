@@ -1,8 +1,8 @@
 #include "main.h"
 
 /**
- *@_strlen -length of string 
- *@s:A pointer prints a string, followed by a newline to stdout
+ *_strlen length of string 
+ *@s: A pointer prints a string, followed by a newline to stdout
  * Return:void
  */
 
