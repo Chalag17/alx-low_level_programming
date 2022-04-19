@@ -7,10 +7,11 @@
  *
  * Return: Nothing
  */
-char s;
+
 int _strlen(char *s)
 {
 int u;
+char s;
 
 u = 0;
 while (s[u] != '\0')
