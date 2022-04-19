@@ -2,11 +2,11 @@
 
 /**
  * _strlen -length of string 
- * *s pointer  - prints a string, followed by a newline to stdout
+ * @s: A pointer prints a string, followed by a newline to stdout
  * 
  * @str: string parameter to print
  *
- * Return: Nothing
+ * Return:void
  */
 
 int _strlen(char *s)
