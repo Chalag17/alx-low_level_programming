@@ -1,4 +1,4 @@
-#include"main.h"
+#include "main.h"
 
 /**
  * _puts - prints a string, followed by a newline to stdout
@@ -7,13 +7,14 @@
  *
  * Return: Nothing
  */
+int _strlen(char *s)
+{
+int u;
 
-void _puts(char *str)
+u = 0;
+while (s[u] != '\0')
 {
-while (*str != '\0')
-{
-_putchar(*str + 0);
-++str;
+u++;
 }
-_putchar('\n');
+return (u);
 }
