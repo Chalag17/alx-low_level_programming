@@ -1,54 +1,85 @@
-#include "dog.h"
 #include <stdlib.h>
-#include <stdio.h>
+#include "dog.h"
+
 /**
- * *new_dog - struct returning
- * *@name: dog name
- * *@age: age of dog
- * *@owner: owner name
- * *Return: dog struct
- * */
+ *  * _strlen - a function that gets a length of string
+ *   *
+ *    * @str: the string to get the length
+ *     *
+ *      * Return: length of @str
+ *      */
+
+int _strlen(const char *str)
+{
+		int length = 0;
+
+			while (*str++)
+						length++;
+				return (length);
+}
+
+/**
+ *  * _strcopy - a function that returns @dest with a copy of a string from @src
+ *   *
+ *    * @src: string to copy
+ *     * @dest: copy string to here
+ *      *
+ *       * Return: @dest
+ *       */
+
+char *_strcopy(char *dest, char *src)
+{
+		int i;
+
+			for (i = 0; src[i]; i++)
+						dest[i] = src[i];
+				dest[i] = '\0';
+
+					return (dest);
+}
+
+/**
+ *  * new_dog - a function that creates a new dog
+ *   *
+ *    * @name: name of dog
+ *     * @age: age of dog
+ *      * @owner: dog owner
+ *       *
+ *        * Return: struct pointer dog
+ *         *         NULL if function fails
+ *         */
+
 dog_t *new_dog(char *name, float age, char *owner)
 {
-	dog_t *dog1;
-	int nameSize = 0, ownerSize = 0, loop;
+		dog_t *dog;
 
-	while (name[nameSize] != '\0')
-	{
-		nameSize++;
-	}
-	while (owner[ownerSize] != '\0')
-	{
-		ownerSize++;
-	}
-	dog1 = malloc(sizeof(dog_t));
-	if (dog1 == NULL)
-	{
-		free(dog1);
-		return (NULL);
-	}
-	dog1->name = malloc(sizeof(dog1->name) * nameSize);
-	if (dog1->name == NULL)
-	{
-		free(dog1->name);
-		free(dog1);
-		return (NULL);
-	}
-	for (loop = 0; loop <= nameSize; loop++)
-	{
-		dog1->name[loop] = name[loop];
-	}
-	dog1->age = age;
-	dog1->owner = malloc(sizeof(dog1->owner) * ownerSize);
-	if (dog1->owner == NULL)
-	{
-		free(dog1->owner);
-		free(dog1->name);
-		free(dog1);
-		return (NULL);
-	}
-	for (loop = 0; loop <= ownerSize; loop++)
-		dog1->owner[loop] = owner[loop];
-	return (dog1);
+			/* if name and owner are empty and age is less than zero return null*/
+			if (!name || age < 0 || !owner)
+						return (NULL);
+
+				dog = (dog_t *) malloc(sizeof(dog_t));
+					if (dog == NULL)
+								return (NULL);
+
+						dog->name = malloc(sizeof(char) * (_strlen(name) + 1));
+							if ((*dog).name == NULL)
+									{
+												free(dog);
+														return (NULL);
+															}
+
+								dog->owner = malloc(sizeof(char) * (_strlen(owner) + 1));
+									if ((*dog).owner == NULL)
+											{
+														free(dog->name);
+																free(dog);
+																		return (NULL);
+																			}
+
+										dog->name = _strcopy(dog->name, name);
+											dog->age = age;
+												dog->owner = _strcopy(dog->owner, owner);
+
+													return (dog);
 }
 
